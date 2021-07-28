@@ -9,6 +9,9 @@ import { HeaderComponent } from './layout/landing-page-layout/header/header.comp
 import { SideBarComponent } from './layout/webshop-layout/side-bar/side-bar.component';
 import { MaterialModuleModule } from './modules/material-module/material-module.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CookieService } from 'ngx-cookie-service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,9 +25,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     MaterialModuleModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
