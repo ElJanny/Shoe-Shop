@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { LayoutManagerService } from './../layout-manager.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainLayoutComponent implements OnInit {
 
-  constructor() { }
+  public layoutState: Observable<number> = this.layoutManagerService.getLayoutState();
+
+  constructor(private layoutManagerService: LayoutManagerService) { }
 
   ngOnInit(): void {
+  }
+
+  setLayoutState(state: number){
+    this.layoutManagerService.setLayoutState(state);
   }
 
 }

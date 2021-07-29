@@ -1,1 +1,14 @@
-<p>main-layout works!</p>
+<ng-container [ngSwitch]="layoutState | async">
+  <ng-container *ngSwitchCase="0">
+    <app-landing-page-layout></app-landing-page-layout>
+  </ng-container>
+  <ng-container *ngSwitchCase="1">
+    <app-webshop-layout></app-webshop-layout>
+  </ng-container>
+  <ng-container *ngSwitchCase="2">
+    <app-default-layout></app-default-layout>
+  </ng-container>
+  <ng-container *ngSwitchDefault >
+    <app-landing-page-layout></app-landing-page-layout>
+  </ng-container>
+</ng-container>

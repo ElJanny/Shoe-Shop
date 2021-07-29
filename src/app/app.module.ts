@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { LandingPageLayoutComponent } from './layout/landing-page-layout/landing-page-layout.component';
+import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
+
 
 
 @NgModule({
@@ -22,13 +25,15 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
     HeaderComponent,
     SideBarComponent,
     MainLayoutComponent,
+    LandingPageLayoutComponent,
+    DefaultLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModuleModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
