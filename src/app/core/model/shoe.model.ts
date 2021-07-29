@@ -1,6 +1,6 @@
 import { DefaultModel } from "./default-model.model";
 
-export interface Shoe<T extends DefaultModel = DefaultModel>{
+export interface Shoe extends DefaultModel{
   price:number;
   name: string;
   color: COLOR;
