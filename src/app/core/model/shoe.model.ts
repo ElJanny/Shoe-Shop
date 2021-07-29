@@ -10,5 +10,4 @@ export interface Shoe extends DefaultModel{
 enum COLOR{
   RED = "red",
   GREEN = "green"
-
 }

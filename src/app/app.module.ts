@@ -11,6 +11,7 @@ import { MaterialModuleModule } from './modules/material-module/material-module.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HeaderComponent,
     SideBarComponent,
+    MainLayoutComponent,
   ],
   imports: [
     BrowserModule,

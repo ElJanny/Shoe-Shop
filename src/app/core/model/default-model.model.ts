@@ -1,3 +1,3 @@
 export interface DefaultModel{
-  id: number;
+  id?: number;
 }

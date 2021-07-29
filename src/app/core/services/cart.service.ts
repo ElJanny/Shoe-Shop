@@ -18,7 +18,7 @@ export class CartService {
     }
   }
 
-  setCart(shoe: Shoe[]):Shoe[]{
+  setCart(shoe: Shoe[]): Shoe[]{
     this.cookieService.set(CookieName,JSON.stringify(shoe));
     return this.getCart();
   }
@@ -30,6 +30,11 @@ export class CartService {
   removeCart(index:number): Shoe[]{
     return this.setCart(this.getCart().splice(index));
   }
+
+  deleteCart(): Shoe[]{
+    return this.setCart([]);
+  }
+
 }
 
 const CookieName = 'cart';
