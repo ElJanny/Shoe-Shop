@@ -13,4 +13,4 @@ export class MenuService extends JSONService<MenuButton> {
    }
 }
 
-const path = '';
+const path = './../../assets/Json/menu/default-menu.JSON';

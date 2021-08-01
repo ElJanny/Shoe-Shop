@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<nav>
+  <ul>
+    <li *ngFor="let button of menuButtons | async ">
+      <div *ngIf="button.type === buttonType.MAINBUTTON ; else elseBlock ">
+      <a [routerLink]="button.path"> {{button.text}} </a>
+      </div>
+      <ng-template #elseBlock>
+        <a (click)="setDisplayShoeButton()">{{button.text}}</a>
+        <div *ngFor="let b of button.menuButtons" [ngStyle]="{'display': displayShoeButton}">
+          <a  [routerLink]="b.path"> {{b.text}} </a>
+        </div>
+      </ng-template>
+    </li>
+  </ul>
+</nav>

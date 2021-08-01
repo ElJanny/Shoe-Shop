@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class LayoutManagerService {
 
-  private layoutState = new BehaviorSubject<number>(0);
+  private layoutState = new BehaviorSubject<number>(2);
 
   constructor() { }
 
