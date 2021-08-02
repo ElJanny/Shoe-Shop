@@ -35,6 +35,7 @@ import { DefaultLayoutComponent } from './layout/default-layout/default-layout.c
     BrowserAnimationsModule,
     HttpClientModule,
   ],
+  exports:[MaterialModuleModule],
   providers: [CookieService],
   bootstrap: [AppComponent]
 })

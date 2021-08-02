@@ -1,15 +1,15 @@
-<nav>
+<mat-toolbar color="accent">
   <ul>
     <li *ngFor="let button of menuButtons | async ">
       <div *ngIf="button.type === buttonType.MAINBUTTON ; else elseBlock ">
-      <a [routerLink]="button.path"> {{button.text}} </a>
+      <button mat-raised-button color="primary" [routerLink]="button.path"> {{button.text}} </button>
       </div>
       <ng-template #elseBlock>
-        <a (click)="setDisplayShoeButton()">{{button.text}}</a>
+        <button mat-raised-button color="primary" (click)="setDisplayShoeButton()">{{button.text}} <mat-icon> expand_more </mat-icon>  </button>
         <div *ngFor="let b of button.menuButtons" [ngStyle]="{'display': displayShoeButton}">
-          <a  [routerLink]="b.path"> {{b.text}} </a>
+          <button  [routerLink]="b.path"> {{b.text}} </button>
         </div>
       </ng-template>
     </li>
   </ul>
-</nav>
+</mat-toolbar>
