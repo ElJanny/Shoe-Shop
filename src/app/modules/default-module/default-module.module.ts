@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { DefaultModuleRoutingModule } from './default-module-routing.module';
 import { DefaultModuleComponent } from './default-module.component';
 import { ContactComponent } from './contact/contact.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
   declarations: [
     DefaultModuleComponent,
-    ContactComponent
+    ContactComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,

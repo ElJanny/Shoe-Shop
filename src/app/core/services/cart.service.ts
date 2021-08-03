@@ -27,8 +27,10 @@ export class CartService {
     return this.setCart(this.getCart().concat(shoe));
   }
 
-  removeCart(index:number): Shoe[]{
-    return this.setCart(this.getCart().splice(index));
+  removeCart(shoe:Shoe): Shoe[]{
+    let tmp: Shoe[] = this.getCart()
+    const index: number = tmp.indexOf(shoe);
+    return this.setCart(tmp.splice(index));
   }
 
   deleteCart(): Shoe[]{
