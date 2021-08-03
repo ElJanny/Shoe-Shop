@@ -9,6 +9,13 @@ import { HeaderComponent } from './layout/landing-page-layout/header/header.comp
 import { SideBarComponent } from './layout/webshop-layout/side-bar/side-bar.component';
 import { MaterialModuleModule } from './modules/material-module/material-module.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CookieService } from 'ngx-cookie-service';
+import { HttpClientModule } from '@angular/common/http';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { LandingPageLayoutComponent } from './layout/landing-page-layout/landing-page-layout.component';
+import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
+
+
 
 @NgModule({
   declarations: [
@@ -17,14 +24,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     HeaderComponent,
     SideBarComponent,
+    MainLayoutComponent,
+    LandingPageLayoutComponent,
+    DefaultLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModuleModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  exports:[MaterialModuleModule],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
