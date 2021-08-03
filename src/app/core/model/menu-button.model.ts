@@ -8,5 +8,7 @@ export interface MenuButton extends DefaultModel {
 
 export enum ButtonType{
   MAINBUTTON = 0,
-  SECONDBUTTON = 1
+  SECONDBUTTON = 1,
+  SPACER = 2,
+  ICON_BUTTON = 3
 }
