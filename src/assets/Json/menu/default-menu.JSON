@@ -1,26 +1,39 @@
 [{
+  "text": "főoldal",
+  "path": "shoe/contact",
+  "type": 0
+},
+{
+  "text": "cipők",
+  "menuButtons":[
+    {
+    "text": "férfi cipők",
+    "path": "shoe/contact",
+    "type": 0},
+    {
+    "text": "női cipők",
+    "path": "shoe/contact",
+    "type": 0},
+    {
+    "text": "gyerek cipők",
+    "path": "shoe/contact",
+    "type": 0}
+  ],
+  "type": 1
+},
+{
   "text": "kapcsolat",
   "path": "shoe/contact",
   "type": 0
 },
 {
-  "text": "teszt",
-  "path": "shoe/contact",
-  "type": 0
+  "text": "",
+  "path": "",
+  "type": 2
 },
 {
-  "text": "teszt3",
-  "path": "shoe/contact",
-  "menuButtons":[
-          {
-          "text": "al-teszt",
-          "path": "shoe/contact",
-          "type": 0},
-          {
-          "text": "al-teszt2",
-          "path": "shoe/contact",
-          "type": 0}
-        ],
-  "type": 1
+  "text": "shopping_cart",
+  "path": "shoe/cart",
+  "type": 3
 }]
 
