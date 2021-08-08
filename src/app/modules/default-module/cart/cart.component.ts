@@ -1,6 +1,6 @@
 import { CartService } from './../../../core/services/cart.service';
 import { Component, OnInit } from '@angular/core';
-import { Shoe } from 'src/app/core/model';
+import { Shoe ,TableContent} from 'src/app/core/model';
 
 @Component({
   templateUrl: './cart.component.html',
@@ -8,27 +8,27 @@ import { Shoe } from 'src/app/core/model';
 })
 export class CartComponent implements OnInit {
 
-  public shoes: Shoe[] = [];
+  public tableContent: TableContent[] = [];
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getCart();
   }
 
-  getCart(){
-    this.shoes = this.cartService.getCart();
+  getCart(): void{
+    this.tableContent = this.cartService.getCart();
   }
 
-  removeCart(shoe:Shoe): void{
-    this.cartService.removeCart(shoe);
+  removeCart(shoe:TableContent): void{
+    this.tableContent = this.cartService.removeCart(shoe);
   }
 
-  deleteCart(){
-    this.cartService.deleteCart();
+  deleteCart(): void{
+    this.tableContent = this.cartService.deleteCart();
   }
 
-  addCart(shoe: Shoe){
-
+  addCart(shoe: TableContent): void{
+    this.tableContent = this.cartService.addContentToCart(shoe);
   }
-
 }
+

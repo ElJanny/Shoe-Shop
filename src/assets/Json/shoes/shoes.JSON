@@ -1,0 +1,5 @@
+[
+  {"price": 15000, "name": "NIKE AIRMAX", "color":["red","green"],"size": [39,41,45] },
+  {"price": 12000, "name": "ADIDAS", "color":["red"],"size": [41,45]},
+  {"price": 12000, "name": "FILA", "color":["green"],"size": [41]}
+]

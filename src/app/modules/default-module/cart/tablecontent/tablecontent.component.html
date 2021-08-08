@@ -1,0 +1,21 @@
+ <div class="container">
+   <ul>
+      <li *ngFor="let content of tableContent">
+        <div class="detail-container">
+          <span>{{content.name}}</span> <span>{{content.quantity}}</span>  <span>{{content.selectedSize}}</span> <span>{{content.color}}</span> <span>{{content.price * content.quantity}}</span>
+        </div>
+        <div class="button-container">
+          <button mat-raised-button color="primary"><mat-icon> add </mat-icon></button>
+          <button mat-raised-button color="primary"><mat-icon> remove </mat-icon></button>
+          <button mat-raised-button color="primary"><mat-icon> delete </mat-icon></button>
+        </div>
+      </li>
+   </ul>
+   <div class="summary-container">
+    <h2>
+      összesen: {{countFinalPrice()}}huf
+    </h2>
+    <span class="spacer"></span>
+    <button mat-raised-button color="primary"> tovább </button>
+   </div>
+ </div>
